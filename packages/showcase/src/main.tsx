@@ -13,7 +13,7 @@ if (!root) throw new Error('#root not found');
 createRoot(root).render(
   <StrictMode>
     <LangProvider>
-      <BrowserRouter basename="/design-system">
+      <BrowserRouter>
         <App />
       </BrowserRouter>
     </LangProvider>
