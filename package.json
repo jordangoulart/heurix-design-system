@@ -5,6 +5,7 @@
   "type": "module",
   "workspaces": ["packages/*"],
   "scripts": {
+    "build": "npm run ds:build && npm run showcase:build",
     "ds:dev": "npm -w @heurix/design-system run storybook",
     "ds:test": "npm -w @heurix/design-system run test",
     "ds:build": "npm -w @heurix/design-system run build",

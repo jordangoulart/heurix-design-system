@@ -49,26 +49,30 @@ export type ParsedColor = { rgb: RGB; oklch: { L: number; C: number; h: number }
 
 export function parseComputedColor(value: string): ParsedColor | null {
   const trimmed = value.trim();
-  let m = oklchRe.exec(trimmed);
-  if (m) {
-    const L = m[1].endsWith('%') ? parseFloat(m[1]) / 100 : parseFloat(m[1]);
-    const C = m[2].endsWith('%') ? (parseFloat(m[2]) / 100) * 0.4 : parseFloat(m[2]);
-    const h = parseFloat(m[3]);
+  const ok = oklchRe.exec(trimmed);
+  if (ok) {
+    const a = ok[1] as string;
+    const b = ok[2] as string;
+    const c = ok[3] as string;
+    const L = a.endsWith('%') ? parseFloat(a) / 100 : parseFloat(a);
+    const C = b.endsWith('%') ? (parseFloat(b) / 100) * 0.4 : parseFloat(b);
+    const h = parseFloat(c);
     return { rgb: oklchToRgb(L, C, h), oklch: { L, C, h } };
   }
-  m = rgbRe.exec(trimmed);
-  if (m) {
-    const r = parseFloat(m[1]) / 255;
-    const g = parseFloat(m[2]) / 255;
-    const b = parseFloat(m[3]) / 255;
+  const rgb = rgbRe.exec(trimmed);
+  if (rgb) {
+    const r = parseFloat(rgb[1] as string) / 255;
+    const g = parseFloat(rgb[2] as string) / 255;
+    const b = parseFloat(rgb[3] as string) / 255;
     return { rgb: [r, g, b], oklch: null };
   }
-  m = hexRe.exec(trimmed);
-  if (m) {
-    const hex = m[1].length === 3 ? m[1].split('').map((c) => c + c).join('') : m[1];
-    const r = parseInt(hex.slice(0, 2), 16) / 255;
-    const g = parseInt(hex.slice(2, 4), 16) / 255;
-    const b = parseInt(hex.slice(4, 6), 16) / 255;
+  const hex = hexRe.exec(trimmed);
+  if (hex) {
+    const raw = hex[1] as string;
+    const full = raw.length === 3 ? raw.split('').map((ch) => ch + ch).join('') : raw;
+    const r = parseInt(full.slice(0, 2), 16) / 255;
+    const g = parseInt(full.slice(2, 4), 16) / 255;
+    const b = parseInt(full.slice(4, 6), 16) / 255;
     return { rgb: [r, g, b], oklch: null };
   }
   return null;
