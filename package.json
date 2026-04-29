@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "npm run ds:build && npm run showcase:build",
     "ds:dev": "npm -w @heurix/design-system run storybook",
@@ -12,10 +14,12 @@
     "showcase:dev": "npm -w @heurix/showcase run dev",
     "showcase:build": "npm -w @heurix/showcase run build",
     "showcase:preview": "npm -w @heurix/showcase run preview",
+    "build:og": "node scripts/build-og.mjs",
     "lint": "eslint packages",
     "format": "prettier --write packages"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^20.11.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
