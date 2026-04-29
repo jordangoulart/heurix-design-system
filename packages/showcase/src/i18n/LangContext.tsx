@@ -18,12 +18,12 @@ const LangContext = createContext<LangContextValue | null>(null);
 const STORAGE_KEY = 'heurix.showcase.lang';
 
 function readStoredLang(): Lang {
-  if (typeof window === 'undefined') return 'pt';
+  if (typeof window === 'undefined') return 'en';
   try {
     const v = window.localStorage.getItem(STORAGE_KEY);
-    return v === 'en' ? 'en' : 'pt';
+    return v === 'pt' ? 'pt' : 'en';
   } catch {
-    return 'pt';
+    return 'en';
   }
 }
 
