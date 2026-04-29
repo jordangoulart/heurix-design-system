@@ -1,0 +1,12 @@
+.root {
+  font-family: 'Chivo Mono', monospace;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+  display: inline-block;
+}
+.lg { font-size: 36px; }
+.xl { font-size: 48px; }
+.xxl { font-size: 64px; }

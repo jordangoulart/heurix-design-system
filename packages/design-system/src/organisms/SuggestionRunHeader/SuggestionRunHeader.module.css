@@ -1,0 +1,36 @@
+.root {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.root::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(100% 55% at 0% 0%, var(--card-glow-color) 0%, transparent 32%);
+  opacity: var(--card-glow-opacity);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+.head { display: flex; flex-direction: column; gap: 2px; }
+.title { font-size: 13px; font-weight: 500; color: var(--fg); }
+.meta {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.right { display: inline-flex; align-items: center; gap: 8px; }

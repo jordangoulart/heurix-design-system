@@ -1,0 +1,24 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--accent-text);
+  font-family: 'Chivo Mono', monospace;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  user-select: none;
+  transition:
+    transform 220ms var(--ease-out),
+    box-shadow 220ms var(--ease-out);
+}
+.root:hover {
+  transform: rotate(-2deg);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 18%, transparent);
+}
+.sm { width: 18px; height: 18px; font-size: 12px; border-radius: 4px; }
+.md { width: 24px; height: 24px; font-size: 14px; }
+.lg { width: 36px; height: 36px; font-size: 20px; border-radius: 8px; }

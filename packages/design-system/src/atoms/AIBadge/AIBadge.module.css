@@ -1,0 +1,22 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 9px 2px 7px;
+  background: transparent;
+  border: 1px solid color-mix(in oklab, var(--accent) 35%, var(--border));
+  border-radius: 999px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 6px color-mix(in oklab, var(--accent) 40%, transparent);
+}

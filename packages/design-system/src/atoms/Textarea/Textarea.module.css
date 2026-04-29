@@ -1,0 +1,34 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+.label {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.textarea {
+  resize: vertical;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--fg-2);
+  width: 100%;
+  min-height: 84px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  outline: none;
+  font-family: inherit;
+  transition:
+    border-color 160ms var(--ease-out),
+    box-shadow 160ms var(--ease-out);
+}
+.textarea:focus {
+  border-color: var(--border-strong);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--fg) 6%, transparent);
+}
+.textarea::placeholder { color: var(--subtle); }

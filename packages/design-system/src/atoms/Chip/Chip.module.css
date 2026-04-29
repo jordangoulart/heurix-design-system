@@ -1,0 +1,58 @@
+.conf {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px 2px 7px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  line-height: 1.4;
+}
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--border-strong);
+}
+.dotOn { background: var(--accent); }
+
+.sg {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  border-radius: 999px;
+  border: 1px solid;
+}
+.high {
+  background: color-mix(in oklab, var(--accent) 18%, transparent);
+  color: var(--accent-text);
+  border-color: color-mix(in oklab, var(--accent) 40%, transparent);
+}
+.medium {
+  background: var(--raised);
+  color: var(--fg-2);
+  border-color: var(--border-strong);
+}
+.low {
+  background: transparent;
+  color: var(--muted);
+  border-color: var(--border);
+}
+.heuristic {
+  background: transparent;
+  color: var(--muted);
+  border-color: var(--border);
+  text-transform: none;
+  letter-spacing: 0;
+}

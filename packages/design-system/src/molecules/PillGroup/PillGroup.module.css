@@ -1,0 +1,8 @@
+.root {
+  display: inline-flex;
+  padding: 3px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  gap: 0;
+}

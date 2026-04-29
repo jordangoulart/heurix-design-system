@@ -1,0 +1,50 @@
+.code {
+  margin-top: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  overflow: hidden;
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  font-family: 'Chivo Mono', monospace;
+}
+.lang {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.copy {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: 'Chivo Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    color 160ms var(--ease-out),
+    border-color 160ms var(--ease-out);
+}
+.copy:hover {
+  color: var(--fg);
+  border-color: var(--border-strong);
+}
+.code pre {
+  padding: 18px 16px;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-x: auto;
+  color: var(--fg-2);
+}
+.code code {
+  font-family: 'Chivo Mono', monospace;
+}

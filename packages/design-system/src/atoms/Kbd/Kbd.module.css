@@ -1,0 +1,20 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  border-radius: 4px;
+  background: color-mix(in oklab, var(--fg) 8%, transparent);
+  border: 1px solid color-mix(in oklab, var(--fg) 12%, transparent);
+  color: var(--muted);
+  white-space: nowrap;
+}
+.onAccent {
+  background: color-mix(in oklab, var(--accent-fg) 14%, transparent);
+  border-color: color-mix(in oklab, var(--accent-fg) 22%, transparent);
+  color: color-mix(in oklab, var(--accent-fg) 85%, transparent);
+}

@@ -1,0 +1,38 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  height: 56px;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in oklab, var(--bg) 90%, transparent);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}
+.brand { display: flex; align-items: center; gap: 8px; }
+.title { font-weight: 500; }
+.divider { color: var(--border-strong); }
+.subtitle { color: var(--muted); }
+.right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+}
+.metaDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 6px color-mix(in oklab, var(--accent) 40%, transparent);
+}

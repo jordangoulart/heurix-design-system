@@ -1,0 +1,36 @@
+.root {
+  padding: 56px 24px;
+  text-align: center;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--surface) 30%, var(--bg));
+}
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+.message {
+  color: var(--muted);
+  font-size: 12px;
+  max-width: 36ch;
+  margin: 0 auto;
+}
+.actions {
+  margin-top: 16px;
+  display: inline-flex;
+  gap: 8px;
+}

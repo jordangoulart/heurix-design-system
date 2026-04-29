@@ -1,0 +1,7 @@
+{
+  "tool_name": "Read",
+  "tool_input_preview": "{\"file_path\":\"/Users/jordangoulart/Documents/heurix/packages/showcase/src/css-modules.d.ts\"}",
+  "error": "File does not exist. Note: your current working directory is /Users/jordangoulart/Documents/heurix/packages/showcase.",
+  "timestamp": "2026-04-28T13:44:22.736Z",
+  "retry_count": 1
+}

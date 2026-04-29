@@ -1,0 +1,29 @@
+.preview {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 56px 32px 32px;
+  margin-top: 8px;
+}
+.preview:first-of-type {
+  margin-top: 0;
+}
+.label {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--subtle);
+}
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+}

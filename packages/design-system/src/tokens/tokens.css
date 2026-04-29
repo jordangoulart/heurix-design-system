@@ -1,0 +1,118 @@
+/* ════════════════════════════════════════════════════════════════════════
+   TOKENS — single source of truth for the Heurix design system.
+   ════════════════════════════════════════════════════════════════════════ */
+:root, [data-theme="dark"] {
+  --bg:            oklch(0.10 0.008 130);
+  --surface:       oklch(0.13 0.008 130);
+  --raised:        oklch(0.17 0.009 130);
+  --hover:         oklch(0.20 0.010 130);
+  --border:        oklch(0.22 0.010 130);
+  --border-strong: oklch(0.32 0.012 130);
+  --fg:            oklch(0.96 0.005 130);
+  --fg-2:          oklch(0.86 0.008 130);
+  --muted:         oklch(0.62 0.010 130);
+  --subtle:        oklch(0.55 0.010 130);
+  --ink-700:       oklch(0.74 0.010 130);
+  --ink-950:       oklch(1.00 0.000 130);
+
+  --accent:        #a8e009;
+  --accent-text:   #a8e009;
+  --accent-fg:     oklch(0.12 0.008 130);
+  --accent-hover:  oklch(0.90 0.22 126);
+  --accent-soft:   oklch(0.28 0.09 126);
+  --accent-ring:   color-mix(in oklab, var(--accent) 30%, transparent);
+
+  --warn:          oklch(0.78 0.17 80);
+  --danger:        oklch(0.70 0.20 28);
+
+  --shadow-drawer:  -40px 0 80px -32px rgba(0, 0, 0, 0.55);
+  --shadow-float:   0 16px 40px -16px rgba(0, 0, 0, 0.6);
+  --shadow-modal:   0 32px 64px -16px rgba(0, 0, 0, 0.65);
+  --shadow-sticky:  0 6px 28px -14px rgba(0, 0, 0, 0.55);
+  --scrim:          rgba(0, 0, 0, 0.55);
+
+  --card-glow-opacity: 0.10;
+  --card-glow-color:   oklch(0.70 0.13 126);
+
+  --syntax-tag:  oklch(0.78 0.13 220);
+  --syntax-str:  oklch(0.84 0.10 80);
+  --syntax-kw:   oklch(0.74 0.14 320);
+  --syntax-com:  var(--subtle);
+  --danger-text: oklch(0.78 0.13 28);
+
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg:            oklch(0.98 0.008 130);
+  --surface:       oklch(0.96 0.008 130);
+  --raised:        oklch(0.93 0.009 130);
+  --hover:         oklch(0.90 0.010 130);
+  --border:        oklch(0.88 0.010 130);
+  --border-strong: oklch(0.78 0.012 130);
+  --fg:            oklch(0.12 0.008 130);
+  --fg-2:          oklch(0.22 0.008 130);
+  --muted:         oklch(0.38 0.010 130);
+  --subtle:        oklch(0.42 0.010 130);
+  --ink-700:       oklch(0.38 0.010 130);
+  --ink-950:       oklch(0.00 0.000 130);
+
+  --accent:        #a8e009;
+  --accent-text:   oklch(0.42 0.22 126);
+  --accent-fg:     oklch(0.12 0.008 130);
+  --accent-hover:  oklch(0.78 0.22 126);
+  --accent-soft:   oklch(0.92 0.10 126);
+  --accent-ring:   color-mix(in oklab, var(--accent) 45%, transparent);
+
+  --warn:          oklch(0.70 0.17 80);
+  --danger:        oklch(0.60 0.20 28);
+
+  --shadow-drawer:  -40px 0 80px -32px rgba(0, 0, 0, 0.15);
+  --shadow-float:   0 12px 32px -12px rgba(0, 0, 0, 0.18);
+  --shadow-modal:   0 24px 56px -16px rgba(0, 0, 0, 0.22);
+  --shadow-sticky:  0 4px 18px -8px rgba(0, 0, 0, 0.12);
+  --scrim:          rgba(0, 0, 0, 0.35);
+
+  --card-glow-opacity: 0.14;
+  --card-glow-color:   oklch(0.50 0.14 126);
+
+  --syntax-tag:  oklch(0.42 0.16 220);
+  --syntax-str:  oklch(0.48 0.13 60);
+  --syntax-kw:   oklch(0.42 0.18 320);
+  --syntax-com:  var(--subtle);
+  --danger-text: oklch(0.50 0.16 28);
+
+  color-scheme: light;
+}
+
+:root {
+  --fs-xs:   11px;
+  --fs-sm:   12px;
+  --fs-base: 13px;
+  --fs-md:   14px;
+  --fs-lg:   16px;
+  --fs-xl:   20px;
+  --fs-2xl:  26px;
+  --fs-3xl:  36px;
+  --fs-4xl:  48px;
+
+  --space-xs:   4px;
+  --space-sm:   8px;
+  --space-md:   12px;
+  --space-base: 16px;
+  --space-lg:   24px;
+  --space-xl:   32px;
+  --space-2xl:  48px;
+  --space-3xl:  64px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --z-sticky:   20;
+  --z-backdrop: 40;
+  --z-drawer:   50;
+  --z-toast:    60;
+  --z-modal-bg: 70;
+  --z-modal:    71;
+  --z-tooltip:  90;
+}

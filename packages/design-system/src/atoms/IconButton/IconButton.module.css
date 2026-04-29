@@ -1,0 +1,34 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  border-radius: 6px;
+  transition:
+    color 140ms var(--ease-out),
+    background 140ms var(--ease-out),
+    transform 160ms var(--ease-out);
+  cursor: pointer;
+}
+.root:hover:not(:disabled) {
+  color: var(--fg);
+  background: var(--hover);
+}
+.root:active:not(:disabled) {
+  transform: scale(0.94);
+  transition-duration: 80ms;
+}
+.root:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.sm { width: 32px; height: 32px; }
+.md { width: 40px; height: 40px; }
+.lg { width: 48px; height: 48px; }
+.danger:hover:not(:disabled) {
+  color: var(--danger);
+  background: color-mix(in oklab, var(--danger) 15%, transparent);
+}

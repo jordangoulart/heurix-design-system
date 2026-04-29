@@ -1,0 +1,29 @@
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.item {
+  display: grid;
+  grid-template-columns: 32px 160px 1fr;
+  gap: 12px;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+}
+.item:last-child { border-bottom: 0; }
+.num {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  color: var(--subtle);
+}
+.token {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 11px;
+  color: var(--fg);
+}
+.desc { color: var(--muted); }

@@ -1,0 +1,40 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+.label {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.input {
+  background: var(--raised);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  outline: none;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  width: 100%;
+  transition:
+    border-color 160ms var(--ease-out),
+    box-shadow 160ms var(--ease-out);
+}
+.input:hover { border-color: var(--border-strong); }
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-ring);
+}
+.input::placeholder { color: var(--subtle); }
+.invalid { border-color: var(--danger); }
+.invalid:focus {
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--danger) 25%, transparent);
+}
+.hint { font-size: 11px; color: var(--muted); }
+.error { font-size: 11px; color: var(--danger-text); }

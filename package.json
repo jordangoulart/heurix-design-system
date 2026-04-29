@@ -1,0 +1,31 @@
+{
+  "name": "heurix-design-system",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "ds:dev": "npm -w @heurix/design-system run storybook",
+    "ds:test": "npm -w @heurix/design-system run test",
+    "ds:build": "npm -w @heurix/design-system run build",
+    "showcase:dev": "npm -w @heurix/showcase run dev",
+    "showcase:build": "npm -w @heurix/showcase run build",
+    "showcase:preview": "npm -w @heurix/showcase run preview",
+    "lint": "eslint packages",
+    "format": "prettier --write packages"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.2.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

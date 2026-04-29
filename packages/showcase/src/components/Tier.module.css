@@ -1,0 +1,29 @@
+.tier { margin-top: 56px; }
+.tier:first-of-type { margin-top: 32px; }
+
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+}
+.desc {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

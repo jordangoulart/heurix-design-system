@@ -1,0 +1,33 @@
+.root {
+  position: relative;
+  background: var(--raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.root::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(100% 55% at 0% 0%, var(--card-glow-color) 0%, transparent 32%);
+  opacity: var(--card-glow-opacity);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  transition: opacity 320ms var(--ease-out);
+}
+.head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.title { font-size: 13px; font-weight: 500; color: var(--fg); }
+.body { color: var(--fg-2); font-size: 13px; line-height: 1.6; }

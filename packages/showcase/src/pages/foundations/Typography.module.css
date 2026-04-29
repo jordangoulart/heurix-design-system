@@ -1,0 +1,203 @@
+.section { padding: 0 0 96px; }
+.title {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-top: 8px;
+  color: var(--fg);
+}
+.blurb {
+  color: var(--muted);
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 60ch;
+}
+
+/* ── Hero: the two faces ── */
+.hero {
+  margin-top: 56px;
+  padding: 40px 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; }
+}
+.face {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faceLabel {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--subtle);
+}
+.faceName {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  color: var(--fg);
+}
+.faceNameMono {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--fg);
+}
+.faceDesc {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+  max-width: 32ch;
+}
+.faceUsage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+.faceTag {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 7px;
+}
+
+/* ── Tier groups ── */
+.tier { margin-top: 64px; }
+.tierHead {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.tierName {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+}
+.tierDesc {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 24px;
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px solid color-mix(in oklab, var(--border) 50%, transparent);
+}
+.row:last-child { border-bottom: 0; }
+.rowToken {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.rowSample {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--fg);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rowSample.heading { font-weight: 600; }
+.rowSample.body { font-weight: 400; letter-spacing: -0.005em; line-height: 1.55; }
+.rowSample.detail { font-weight: 400; letter-spacing: 0; line-height: 1.45; }
+.rowMeta {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  color: var(--subtle);
+  white-space: nowrap;
+}
+
+/* ── Pairing example ── */
+.pair {
+  margin-top: 80px;
+}
+.pairHead {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+  color: var(--fg);
+}
+.pairSub {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+  max-width: 60ch;
+  margin-bottom: 24px;
+}
+.pairCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px 36px;
+}
+.pairEyebrow {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+.pairTitle {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--fg);
+  margin-top: 12px;
+  max-width: 22ch;
+}
+.pairBody {
+  margin-top: 16px;
+  color: var(--fg-2);
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 56ch;
+}
+.pairMeta {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.pairMetaItem {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--subtle);
+}
+.pairMetaItem strong {
+  color: var(--accent-text);
+  font-weight: 500;
+}

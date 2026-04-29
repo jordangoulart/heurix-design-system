@@ -1,0 +1,198 @@
+.section { padding: 0 0 96px; }
+.title {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-top: 8px;
+  color: var(--fg);
+}
+.blurb {
+  color: var(--muted);
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 60ch;
+}
+
+/* Hero — layered visualization */
+.hero {
+  margin-top: 56px;
+  padding: 56px 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; gap: 48px; }
+}
+.heroVisual {
+  position: relative;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.layer {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background: var(--raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.layer1 { transform: translate(-32px, -32px); box-shadow: var(--shadow-sticky); }
+.layer2 { transform: translate(0, 0); box-shadow: var(--shadow-float); }
+.layer3 { transform: translate(32px, 32px); box-shadow: var(--shadow-modal); }
+
+.heroMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.heroTitle {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+}
+.heroBody {
+  color: var(--fg-2);
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 44ch;
+}
+
+/* Tier */
+.tier { margin-top: 64px; }
+.tierHead {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.tierName {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+}
+.tierDesc {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.shadowGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 24px 0 32px;
+}
+.shadowCell {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+  min-height: 200px;
+}
+.shadowCell.sticky { box-shadow: var(--shadow-sticky); }
+.shadowCell.float { box-shadow: var(--shadow-float); }
+.shadowCell.modal { box-shadow: var(--shadow-modal); }
+.shadowCell.drawer { box-shadow: var(--shadow-drawer); }
+
+.shadowDemo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shadowToken {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 11px;
+  color: var(--accent-text);
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.shadowDesc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* Z-index reference */
+.zindex {
+  margin-top: 80px;
+}
+.zindexHead {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+  color: var(--fg);
+}
+.zindexSub {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+  max-width: 60ch;
+  margin-bottom: 24px;
+}
+.zList {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.zRow {
+  background: var(--surface);
+  display: grid;
+  grid-template-columns: 80px 1fr 200px;
+  gap: 20px;
+  padding: 14px 20px;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .zRow { grid-template-columns: 80px 1fr; }
+  .zRow .zMeta { display: none; }
+}
+.zValue {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent-text);
+  letter-spacing: -0.01em;
+}
+.zName {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 12px;
+  color: var(--fg);
+}
+.zMeta {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: right;
+  line-height: 1.5;
+}

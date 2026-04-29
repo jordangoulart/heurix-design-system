@@ -1,0 +1,31 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--raised);
+  border: 1px solid var(--border-strong);
+  color: var(--fg);
+  box-shadow: var(--shadow-float);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 420px;
+}
+.error {
+  background: color-mix(in oklab, var(--danger) 88%, black);
+  border-color: var(--danger);
+  color: oklch(0.98 0.02 28);
+}
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  color: var(--accent-text);
+}
+.error .icon { color: oklch(0.98 0.02 28); }
+.message { flex: 1; min-width: 0; }

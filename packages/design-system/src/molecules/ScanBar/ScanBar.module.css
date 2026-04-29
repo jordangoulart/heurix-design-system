@@ -1,0 +1,21 @@
+.root {
+  position: relative;
+  overflow: hidden;
+  height: 2px;
+  background: color-mix(in oklab, var(--accent) 15%, var(--border));
+  border-radius: 999px;
+  width: 100%;
+}
+@keyframes ds-scan-loop {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+.root::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 25%;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: ds-scan-loop 1.6s ease-in-out infinite;
+}
+.paused::after { animation-play-state: paused; }

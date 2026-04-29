@@ -1,0 +1,126 @@
+.hero {
+  padding-bottom: 64px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 64px;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.eyebrowDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 6px color-mix(in oklab, var(--accent) 40%, transparent);
+}
+.title {
+  font-size: clamp(36px, 6vw, 56px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+  margin-top: 24px;
+  max-width: 18ch;
+  color: var(--fg);
+}
+.title em {
+  font-family: 'Chivo Mono', monospace;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--accent-text);
+}
+.body {
+  color: var(--fg-2);
+  margin-top: 28px;
+  max-width: 56ch;
+  font-size: 16px;
+  line-height: 1.65;
+}
+.body + .body {
+  margin-top: 16px;
+}
+.body strong {
+  color: var(--fg);
+  font-weight: 500;
+}
+.lead {
+  font-size: 18px;
+  color: var(--fg);
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 32px 24px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.metaValue {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--fg);
+  letter-spacing: -0.005em;
+}
+.metaValue.mono {
+  font-family: 'Chivo Mono', monospace;
+  font-weight: 500;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+.metaValue.accent {
+  color: var(--accent-text);
+  font-family: 'Chivo Mono', monospace;
+}
+
+.principles {
+  margin-top: 0;
+}
+.principlesTitle {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin-bottom: 24px;
+  color: var(--fg);
+}
+.principleList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.principle {
+  background: var(--surface);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.principleNum {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--subtle);
+}
+.principleHeading {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--fg);
+  letter-spacing: -0.005em;
+}
+.principleBody {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}

@@ -1,0 +1,111 @@
+.swatchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.tokenCard {
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.swatch {
+  height: 64px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+.tokenName {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 11px;
+  color: var(--fg);
+}
+.tokenValue {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.typeRow {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 24px;
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.typeRow:last-child { border-bottom: 0; }
+.typeLabel {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.typeMeta {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  color: var(--subtle);
+  white-space: nowrap;
+}
+
+.spaceRow {
+  display: grid;
+  grid-template-columns: 120px 1fr 80px;
+  gap: 16px;
+  align-items: center;
+  padding: 8px 0;
+}
+.spaceName {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 11px;
+  color: var(--fg);
+}
+.spaceBar {
+  background: var(--accent);
+  height: 14px;
+  border-radius: 2px;
+}
+.spaceValue {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  text-align: right;
+}
+
+.radiusGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+}
+.radiusCard {
+  padding: 16px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.radiusShape {
+  width: 56px;
+  height: 56px;
+  background: var(--accent);
+}
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 4px;
+}
+.blurb {
+  color: var(--muted);
+  margin-top: 8px;
+  font-size: 14px;
+}
+.section {
+  padding: 24px 0 64px;
+}
