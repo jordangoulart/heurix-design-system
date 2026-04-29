@@ -1,6 +1,29 @@
 {
   "name": "@heurix/design-system",
   "version": "0.1.0",
+  "description": "Heurix design system — React components, OKLCH semantic tokens, dark/light theming.",
+  "keywords": [
+    "design-system",
+    "react",
+    "ui",
+    "components",
+    "tokens",
+    "oklch",
+    "tailwind-alternative",
+    "headless-ui",
+    "heurix"
+  ],
+  "license": "MIT",
+  "author": "Jordan Goulart",
+  "homepage": "https://heurix-design-system-design-system.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordangoulart/heurix-design-system.git",
+    "directory": "packages/design-system"
+  },
+  "bugs": {
+    "url": "https://github.com/jordangoulart/heurix-design-system/issues"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -11,14 +34,25 @@
     "./tokens.css": "./src/tokens/tokens.css",
     "./reset.css": "./src/tokens/reset.css"
   },
-  "files": ["dist", "src/tokens"],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist",
+    "src/tokens",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build && tsc -p tsconfig.build.json",
     "test": "vitest run",
     "test:watch": "vitest",
     "storybook": "storybook dev -p 6006 --no-open",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "react": "^18.0.0",
