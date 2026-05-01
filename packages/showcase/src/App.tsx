@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { ThemeToggle } from '@heurix/design-system';
 import { BrandIcon, BrandLogo } from './components/Brand';
 import { Sidebar } from './components/Sidebar';
@@ -126,6 +127,7 @@ export function App() {
           {t({ pt: '© Heurix · Design system', en: '© Heurix · Design system' })}
         </span>
       </footer>
+      <Analytics />
     </div>
   );
 }
