@@ -4,9 +4,11 @@
   "outputDirectory": "packages/showcase/dist",
   "installCommand": "npm install",
   "framework": null,
+  "redirects": [
+    { "source": "/storybook", "destination": "/storybook/", "permanent": false }
+  ],
   "rewrites": [
-    { "source": "/storybook", "destination": "/storybook/index.html" },
-    { "source": "/storybook/(.*)", "destination": "/storybook/$1" },
+    { "source": "/storybook/", "destination": "/storybook/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
