@@ -7,8 +7,9 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run ds:build && npm run showcase:build",
+    "build": "npm run ds:build && npm run showcase:build && npm run ds:storybook:build",
     "ds:dev": "npm -w @heurix/design-system run storybook",
+    "ds:storybook:build": "npm -w @heurix/design-system run storybook:build -- -o ../showcase/dist/storybook",
     "ds:test": "npm -w @heurix/design-system run test",
     "ds:build": "npm -w @heurix/design-system run build",
     "showcase:dev": "npm -w @heurix/showcase run dev",
